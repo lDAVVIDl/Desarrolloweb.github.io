@@ -1,3 +1,4 @@
+/* Fondo animado */
 body {
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(270deg, #f9f9f9, #e9e9ff);
@@ -9,17 +10,19 @@ body {
 }
 
 @keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* Tipografía de encabezados */
 h1, h2, h3 {
   font-weight: 700;
   color: #2c3e50;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
+/* Sección Héroe */
 #hero {
   background: linear-gradient(135deg, #dff9fb, #b2ebf2);
   border-radius: 15px;
@@ -27,17 +30,20 @@ h1, h2, h3 {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Sección de equipo */
 #team {
   background: #fef9f9;
   padding: 60px 0;
 }
 
+/* Sección contacto */
 #contact {
   background: linear-gradient(135deg, #f0f8ff, #d6eaff);
   border-radius: 10px;
   padding: 60px 20px;
 }
 
+/* Pie de página */
 footer {
   font-size: 0.9rem;
   background: #1c1c1c;
@@ -46,6 +52,7 @@ footer {
   transition: background-color 0.5s ease;
 }
 
+/* Tarjetas */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -62,6 +69,7 @@ footer {
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
+/* Imagen en tarjeta */
 .card-img-top {
   width: 100%;
   height: 300px;
@@ -70,6 +78,7 @@ footer {
   border-bottom: 2px solid #4CAF50;
 }
 
+/* Cuerpo de tarjeta */
 .card-body {
   background: #ffffff;
   border-top: 5px solid #4CAF50;
@@ -79,13 +88,16 @@ footer {
   justify-content: space-between;
 }
 
-form input, form textarea {
+/* Formulario */
+form input,
+form textarea {
   border-radius: 8px;
   border: 1px solid #ccc;
   padding: 10px;
   font-size: 1rem;
 }
 
+/* Botones */
 .btn-primary {
   background-color: #4CAF50;
   border-color: #4CAF50;
@@ -97,12 +109,39 @@ form input, form textarea {
   border-color: #45a049;
 }
 
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+/* Navbar */
 .navbar {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* DARK MODE desde <html class="dark-mode"> */
+/* Botón modo oscuro flotante */
+.toggle-mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
 
+.toggle-mode:hover {
+  background: #444;
+}
+
+/* Modo oscuro aplicado al <html> */
 html.dark-mode body {
   background-color: #121212 !important;
   color: #f0f0f0;
@@ -139,5 +178,3 @@ html.dark-mode footer {
 html.dark-mode .navbar {
   background-color: #111 !important;
 }
-
-  
