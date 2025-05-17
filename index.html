@@ -14,74 +14,11 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-  <!-- AOS CSS (Animaciones) -->
+  <!-- AOS Animations -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-  <!-- CSS personalizado -->
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .toggle-mode {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      padding: 10px 15px;
-      font-size: 1.1rem;
-      background: #222;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: background 0.3s ease;
-    }
-
-    .toggle-mode:hover {
-      background: #444;
-    }
-
-    .dark-mode {
-      background-color: #121212 !important;
-      color: #f0f0f0;
-    }
-
-    .dark-mode .card {
-      background-color: #1e1e1e;
-      color: #fff;
-    }
-
-    .dark-mode .card-body {
-      background-color: #2a2a2a;
-    }
-
-    .dark-mode .btn-primary,
-    .dark-mode .btn-outline-primary {
-      background-color: #4caf50;
-      border-color: #4caf50;
-      color: #fff;
-    }
-
-    .dark-mode .btn-primary:hover,
-    .dark-mode .btn-outline-primary:hover {
-      background-color: #3c8c40;
-      border-color: #3c8c40;
-      color: #fff;
-    }
-
-    .dark-mode footer {
-      background-color: #000;
-      color: #aaa;
-    }
-
-    .dark-mode .navbar {
-      background-color: #111 !important;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -138,7 +75,6 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.365319189963!2d-72.23636968580608!3d11.37641699186259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea2d7e443e17b19%3A0x45357467a6a0d3d4!2sUniversidad%20de%20La%20Guajira%20-%20Maicao!5e0!3m2!1ses-419!2sco!4v1687643569621!5m2!1ses-419!2sco"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
@@ -150,10 +86,10 @@
     <p class="mb-0">&copy; 2025 - Curso Desarrollo Web - Uniguajira</p>
   </footer>
 
-  <!-- Botón modo oscuro -->
-  <button class="toggle-mode" onclick="document.body.classList.toggle('dark-mode')">🌙 Modo Oscuro</button>
+  <!-- Botón de modo oscuro -->
+  <button class="toggle-mode" onclick="document.documentElement.classList.toggle('dark-mode')">🌙 Modo Oscuro</button>
 
-  <!-- Script dinámico para cargar integrantes -->
+  <!-- Generar tarjetas del equipo -->
   <script>
     const team = [
       { name: "Alan Henriquez", role: "Desarrollador Web", img: "./alan.jpg", link: "./Integrante1.html" },
@@ -183,7 +119,7 @@
     });
   </script>
 
-  <!-- Bootstrap & AOS Scripts -->
+  <!-- Bootstrap y AOS Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
