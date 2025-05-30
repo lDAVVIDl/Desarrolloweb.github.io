@@ -4,111 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Oswaldo Uribe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #ff416c;
+            --secondary: #00dbde;
+            --accent: #ffce00;
+            --bg-dark: #222831cc;
+            --glass: rgba(255, 255, 255, 0.09);
+            --border-glow: 0 0 15px #ff00de8c, 0 0 25px #00dbde66;
+        }
         @keyframes gradientFlow {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
         @keyframes pulse {
-            0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00de; }
-            50% { text-shadow: 0 0 20px #fff, 0 0 60px #ff00de; }
+            0%, 100% { text-shadow: 0 0 8px #fff, 0 0 18px var(--primary); }
+            50% { text-shadow: 0 0 25px #fff, 0 0 70px var(--primary); }
         }
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
-            padding: 0;
             min-height: 100vh;
-            background: linear-gradient(270deg, #ff416c, #ff4b2b, #ffce00, #00dbde, #0083b0);
-            background-size: 1000% 1000%;
-            animation: gradientFlow 20s ease infinite;
-            color: white;
+            background: linear-gradient(125deg, var(--primary), var(--secondary), var(--accent), #0083b0, #2b5876);
+            background-size: 2000% 2000%;
+            animation: gradientFlow 24s ease infinite;
+            color: #fff;
+        }
+        main {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3vw 1vw;
         }
         .profile-container {
-            max-width: 700px;
-            margin: 50px auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
+            background: var(--bg-dark);
+            border-radius: 2rem;
+            box-shadow: 0 12px 50px #0008, 0 0 0 2px var(--glass);
+            padding: 2.8rem 2.4rem 2.2rem 2.4rem;
+            max-width: 420px;
+            width: 100%;
             text-align: center;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(18px) saturate(1.3);
+            position: relative;
+            overflow: hidden;
         }
-        .profile-container img {
-            width: 180px;
-            height: 180px;
+        .profile-container::before {
+            content: "";
+            position: absolute;
+            top: -20%; left: -20%;
+            width: 140%; height: 140%;
+            background: radial-gradient(circle at 70% 20%, var(--accent)22%, transparent 70%), 
+                        radial-gradient(circle at 10% 90%, var(--secondary)18%, transparent 60%);
+            opacity: 0.19;
+            z-index: 0;
+        }
+        .profile-container * { position: relative; z-index: 1;}
+
+        .profile-img-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
             border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 15px;
+            border: 3.5px solid #fff;
+            box-shadow: 0 0 0 7px #ff416c33, 0 4px 18px #0006;
+            transition: transform 0.3s;
+            background: #fff3;
+            filter: saturate(1.15) contrast(1.1);
         }
-        h2 {
-            font-size: 2.5rem;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de;
-            animation: pulse 2s infinite;
+        .profile-img:hover {
+            transform: scale(1.06) rotate(-4deg);
+            box-shadow: 0 0 0 11px #ff00de44, 0 4px 24px #00dbde44;
+        }
+        h1 {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-size: 2.3rem;
+            margin-bottom: 0.2em;
+            animation: pulse 2.1s infinite;
+            letter-spacing: 1px;
+            color: var(--primary);
+        }
+        .role {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.09rem;
+            letter-spacing: 2px;
+            color: var(--secondary);
+            text-shadow: 0 0 5px #fff3, 0 0 14px var(--secondary);
+            margin-bottom: 0.55rem;
+        }
+        .description {
+            font-size: 1.09rem;
+            margin-bottom: 1.6rem;
+            line-height: 1.55;
+            color: #fff;
+            text-shadow: 0 1px 10px #0005;
+        }
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
         }
         .skills {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
             flex-wrap: wrap;
+            gap: 0.6em;
+            margin-bottom: 1.6rem;
         }
         .skill {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 15px;
-            border-radius: 10px;
-            font-weight: bold;
+            background: linear-gradient(120deg, var(--secondary) 30%, var(--primary) 80%);
+            color: #fff;
+            padding: 0.48em 1.05em;
+            border-radius: 1.2em;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1em;
+            box-shadow: 0 0 4px #ffce004a, 0 0 8px #00dbde44;
+            border: none;
+            transition: background 0.3s, color 0.15s, transform 0.18s;
+            cursor: pointer;
+            outline: none;
+        }
+        .skill:hover {
+            background: linear-gradient(120deg, #fff 40%, var(--primary) 100%);
+            color: var(--primary);
+            transform: translateY(-2px) scale(1.07);
+            box-shadow: var(--border-glow);
+        }
+        .social-links {
+            margin-bottom: 1.4rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.7em;
         }
         .social-links a {
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.3);
+            background: linear-gradient(90deg, var(--primary) 65%, var(--secondary) 100%);
             color: #fff;
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 8px;
-            display: inline-block;
-            transition: transform 0.3s ease, background 0.3s ease;
+            padding: 10px 19px 10px 17px;
+            border-radius: 1.2em;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.09em;
+            display: flex;
+            align-items: center;
+            gap: 0.55em;
+            box-shadow: 0 2px 12px #ff416c33;
+            border: none;
+            transition: background 0.22s, color 0.16s, transform 0.18s;
+            outline: none;
+            position: relative;
         }
-        .social-links a:hover {
-            transform: scale(1.1);
-            background: rgba(255, 255, 255, 0.6);
-            color: #000;
-        }
-        a.return {
+        .social-links a::before {
+            content: '';
             display: inline-block;
-            margin-top: 30px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
+            width: 1.25em;
+            height: 1.25em;
+            background-size: cover;
+            margin-right: 0.4em;
+        }
+        .social-links a[aria-label*="Facebook"]::before {
+            background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg');
+            filter: invert(1) drop-shadow(0 0 2px #0008);
+        }
+        .social-links a[aria-label*="Instagram"]::before {
+            background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg');
+            filter: invert(1) drop-shadow(0 0 2px #0008);
+        }
+        .social-links a:hover, .social-links a:focus {
+            background: #fff;
+            color: var(--primary);
+            transform: scale(1.09) translateY(-1px);
+            box-shadow: var(--border-glow);
+        }
+        .return-link {
+            background: linear-gradient(90deg, var(--secondary) 65%, var(--accent) 100%);
+            padding: 11px 32px;
             color: #fff;
-            border-radius: 10px;
+            border-radius: 1.2em;
             text-decoration: none;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.09em;
+            box-shadow: 0 2px 12px #0083b055;
+            transition: background 0.22s, color 0.17s, transform 0.18s;
+            display: inline-block;
+            margin-top: 0.5rem;
         }
-        a.return:hover {
-            background: rgba(255, 255, 255, 0.5);
-            color: #000;
+        .return-link:hover, .return-link:focus {
+            background: #fff;
+            color: var(--secondary);
+            transform: scale(1.06) translateY(-2px);
+            box-shadow: var(--border-glow);
+        }
+        @media (max-width: 600px) {
+            .profile-container {
+                max-width: 98vw;
+                padding: 1.3rem 0.3rem 1.1rem 0.3rem;
+            }
+            .profile-img {
+                width: 108px;
+                height: 108px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="profile-container">
-        <img src="oswaldo.jpg" alt="Foto de Oswaldo Uribe">
-        <h2>Oswaldo Uribe</h2>
-        <p><strong>Rol:</strong> Desarrollador</p>
-        <p>
-            Estudiante de Ingeniería de Sistemas en octavo semestre. Fuerte, guapo, resiliente, resistente, leal, inteligente, astuto, carismático, habilidoso, suertudo, sociable, amable e imponente.
+<main>
+    <section class="profile-container" aria-label="Perfil de Oswaldo Uribe">
+        <div class="profile-img-wrap">
+            <img class="profile-img" src="oswaldo.jpg" loading="lazy" alt="Retrato profesional de Oswaldo Uribe, desarrollador">
+        </div>
+        <h1>Oswaldo Uribe</h1>
+        <div class="role">Desarrollador</div>
+        <p class="description">
+            Estudiante de Ingeniería de Sistemas (8° semestre). <span class="highlight">Fuerte</span>, <span class="highlight">resiliente</span>, <span class="highlight">leal</span>, <span class="highlight">inteligente</span>, <span class="highlight">astuto</span>, <span class="highlight">carismático</span> y <span class="highlight">hábil</span>.
+            Siempre <span class="highlight">dispuesto a aprender</span> y aportar valor al equipo con creatividad y pasión por la tecnología.
         </p>
-        <div class="skills">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Python</span>
-            <span class="skill">C++</span>
+        <div class="skills" aria-label="Habilidades tecnológicas">
+            <span class="skill" tabindex="0">HTML</span>
+            <span class="skill" tabindex="0">CSS</span>
+            <span class="skill" tabindex="0">JavaScript</span>
+            <span class="skill" tabindex="0">Python</span>
+            <span class="skill" tabindex="0">C++</span>
         </div>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-        </div>
-        <a href="index.html" class="return">Volver al equipo</a>
-    </div>
+        <nav class="social-links" aria-label="Redes sociales">
+            <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Oswaldo Uribe">Facebook</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Oswaldo Uribe">Instagram</a>
+        </nav>
+        <a href="index.html" class="return-link" aria-label="Volver al equipo">Volver al equipo</a>
+    </section>
+</main>
 </body>
 </html>
