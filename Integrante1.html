@@ -4,88 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Alan Henriquez</title>
+    <!-- Font Awesome CDN para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        @keyframes gradientFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        @keyframes pulse {
-            0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00de; }
-            50% { text-shadow: 0 0 20px #fff, 0 0 60px #ff00de; }
-        }
         body {
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            background: linear-gradient(270deg, #ff416c, #ff4b2b, #ffce00, #00dbde, #0083b0);
-            background-size: 1000% 1000%;
-            animation: gradientFlow 20s ease infinite;
-            color: white;
+            background: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 100%);
+            animation: bgmove 15s ease-in-out infinite alternate;
+            color: #fff;
+        }
+        @keyframes bgmove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
         }
         .profile-container {
-            max-width: 700px;
-            margin: 50px auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
+            max-width: 410px;
+            margin: 60px auto;
+            background: rgba(30, 30, 60, 0.7);
+            padding: 35px 30px 30px 30px;
+            border-radius: 25px;
             backdrop-filter: blur(10px);
             text-align: center;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 32px rgba(30, 30, 60, 0.18);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        .profile-container:hover {
+            transform: translateY(-6px) scale(1.025);
+            box-shadow: 0 24px 48px rgba(30, 30, 60, 0.26);
         }
         .profile-container img {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 15px;
+            border: 4px solid #fff;
+            margin-bottom: 18px;
+            box-shadow: 0 8px 24px #00dbde88;
+            object-fit: cover;
+            animation: pulseimg 2.5s infinite;
+        }
+        @keyframes pulseimg {
+            0%, 100% { box-shadow: 0 8px 24px #00dbde88; }
+            50% { box-shadow: 0 0px 36px #ff4b2b88; }
         }
         h2 {
-            font-size: 2.5rem;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de;
-            animation: pulse 2s infinite;
+            font-size: 2.4rem;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px #00dbde77, 0 0 2px #fff;
+        }
+        .rol {
+            font-size: 1.1rem;
+            color: #ffce00;
+            margin-bottom: 10px;
+        }
+        .desc {
+            font-size: 1.03rem;
+            margin-bottom: 18px;
+            color: #d6eaff;
+            line-height: 1.5;
         }
         .skills {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin: 20px 0;
+            margin: 18px 0 20px 0;
             flex-wrap: wrap;
         }
         .skill {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 15px;
-            border-radius: 10px;
+            background: #ff4b2b;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px #ff4b2b33;
+            transition: background 0.2s;
+        }
+        .skill:nth-child(2) { background: #0083b0; }
+        .skill:nth-child(3) { background: #ffce00; color: #333; }
+        .social-links {
+            margin: 18px 0;
         }
         .social-links a {
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.3);
-            color: #fff;
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 8px;
+            margin: 0 8px;
             display: inline-block;
-            transition: transform 0.3s ease, background 0.3s ease;
+            font-size: 1.5rem;
+            color: #fff;
+            padding: 10px;
+            background: rgba(0,219,222,0.2);
+            border-radius: 50%;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
         }
         .social-links a:hover {
-            transform: scale(1.1);
-            background: rgba(255, 255, 255, 0.6);
-            color: #000;
+            background: #ff4b2b;
+            color: #fff;
+            transform: scale(1.15) rotate(-8deg);
         }
         a.return {
             display: inline-block;
             margin-top: 30px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
+            background: #0083b0;
+            padding: 10px 24px;
             color: #fff;
-            border-radius: 10px;
+            border-radius: 12px;
             text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px #0083b033;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
         }
         a.return:hover {
-            background: rgba(255, 255, 255, 0.5);
-            color: #000;
+            background: #ffce00;
+            color: #333;
+            transform: scale(1.07);
         }
     </style>
 </head>
@@ -93,21 +132,22 @@
     <div class="profile-container">
         <img src="alan.jpg" alt="Foto de Alan Henriquez">
         <h2>Alan Henriquez</h2>
-        <p><strong>Rol:</strong> Desarrollador Web</p>
-        <p>
-            Estudiante de Ingeniería de Sistemas de octavo semestre en la Universidad de La Guajira, sede Maicao.
-            24 años de edad. Dedicado a la programación web, desarrollo de aplicaciones, reparaciones de computadores, instalacion de hardware y mantenimiento de redes.
-        </p>
+        <div class="rol"><i class="fa-solid fa-laptop-code"></i> Desarrollador Web</div>
+        <div class="desc">
+            Estudiante de Ingeniería de Sistemas de octavo semestre en la Universidad de La Guajira, sede Maicao. <br>
+            24 años de edad. Dedicado a la programación web, desarrollo de aplicaciones, reparaciones de computadores, instalación de hardware y mantenimiento de redes.
+        </div>
         <div class="skills">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
+            <span class="skill"><i class="fab fa-html5"></i> HTML</span>
+            <span class="skill"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="skill"><i class="fab fa-js-square"></i> JavaScript</span>
         </div>
         <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <!-- Puedes agregar más redes si quieres -->
         </div>
-        <a href="index.html" class="return">Volver al equipo</a>
+        <a href="index.html" class="return"><i class="fa-solid fa-arrow-left"></i> Volver al equipo</a>
     </div>
 </body>
 </html>
