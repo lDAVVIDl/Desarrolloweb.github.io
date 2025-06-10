@@ -30,10 +30,80 @@ h1, h2, h3 {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* HERO */
+.hero-section {
+  background: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 100%);
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-title {
+  color: #283593;
+  text-shadow: 0 2px 10px #fff7;
+}
+.hero-subtitle {
+  color: #0083b0;
+}
+.hero-btn {
+  background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 10px #0083b033;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.hero-btn:hover {
+  background: #fff;
+  color: #0093e9;
+  transform: scale(1.07);
+}
+.hero-bubbles {
+  position: absolute;
+  left: 10%; top: 80%; width: 80px; height: 80px;
+  background: radial-gradient(circle at 30% 30%, #0093e9 0%, #ffc107 100%);
+  border-radius: 50%;
+  opacity: 0.13;
+  animation: heroBubble 7s ease-in-out infinite alternate;
+  z-index: 0;
+}
+@keyframes heroBubble {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(-40px) scale(1.2);}
+}
+
 /* Sección de equipo */
 #team {
   background: #fef9f9;
   padding: 60px 0;
+}
+
+/* TEAM */
+.team-title {
+  color: #283593;
+  font-weight: 700;
+}
+#team-row .card {
+  border: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 2px 12px #0093e911;
+  border-radius: 1rem;
+}
+#team-row .card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px #0093e933;
+}
+#team-row .btn-outline-primary {
+  border-radius: 50px;
+  border-width: 2px;
+  font-weight: 600;
+  color: #0093e9;
+  border-color: #0093e9;
+  transition: background 0.2s, color 0.2s;
+}
+#team-row .btn-outline-primary:hover {
+  background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%);
+  color: #fff;
+  border: none;
 }
 
 /* Sección contacto */
@@ -43,6 +113,21 @@ h1, h2, h3 {
   padding: 60px 20px;
 }
 
+/* CONTACTO */
+.contact-section {
+  background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px #0093e911;
+}
+.contact-title {
+  color: #0083b0;
+  font-weight: 700;
+}
+.contact-section .form-control:focus {
+  border-color: #0093e9;
+  box-shadow: 0 0 0 0.2rem #0093e955;
+}
+
 /* Pie de página */
 footer {
   font-size: 0.9rem;
@@ -50,6 +135,36 @@ footer {
   color: #eee;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
   transition: background-color 0.5s ease;
+}
+
+/* FOOTER */
+.footer-main {
+  margin-top: 2rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: 0 -2px 10px #0083b033;
+  position: relative;
+  overflow: hidden;
+}
+.footer-bar {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #0093e9 60%, #ffc107 100%);
+  animation: footerBar 3s linear infinite alternate;
+  border-radius: 0 0 12px 12px;
+  opacity: 0.7;
+}
+@keyframes footerBar {
+  0% { width: 30%; left: 35%; }
+  100% { width: 100%; left: 0; }
+}
+.social-link {
+  color: #0093e9;
+  transition: color 0.2s, transform 0.2s;
+}
+.social-link:hover {
+  color: #ffc107;
+  transform: scale(1.2);
 }
 
 /* Tarjetas */
@@ -141,40 +256,22 @@ form textarea {
   background: #444;
 }
 
-/* Modo oscuro aplicado al <html> */
-html.dark-mode body {
-  background-color: #121212 !important;
-  color: #f0f0f0;
+/* Dark mode extra */
+.dark-mode {
+  background: #23243a !important;
+  color: #fff !important;
 }
-
-html.dark-mode .card {
-  background-color: #1e1e1e;
-  color: #fff;
+.dark-mode .card,
+.dark-mode .modal-content {
+  background: #2c2e4a !important;
+  color: #fff !important;
 }
-
-html.dark-mode .card-body {
-  background-color: #2a2a2a;
+.dark-mode .btn-primary,
+.dark-mode .btn-outline-primary {
+  background: #0093e9 !important;
+  color: #fff !important;
+  border: none !important;
 }
-
-html.dark-mode .btn-primary,
-html.dark-mode .btn-outline-primary {
-  background-color: #4caf50;
-  border-color: #4caf50;
-  color: #fff;
-}
-
-html.dark-mode .btn-primary:hover,
-html.dark-mode .btn-outline-primary:hover {
-  background-color: #3c8c40;
-  border-color: #3c8c40;
-  color: #fff;
-}
-
-html.dark-mode footer {
-  background-color: #000;
-  color: #aaa;
-}
-
-html.dark-mode .navbar {
-  background-color: #111 !important;
+.dark-mode .footer-bar {
+  background: linear-gradient(90deg, #ffc107 60%, #0093e9 100%);
 }

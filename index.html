@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
   <!-- AOS Animations -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -37,21 +37,25 @@
   </header>
 
   <main class="container mt-4">
-    <section id="hero" class="text-center py-5" data-aos="fade-down">
-      <h1 class="display-4">Bienvenidos al Curso de Desarrollo Web 2025</h1>
-      <p class="lead">Universidad de La Guajira - Sede Maicao</p>
+    <section id="hero" class="hero-section text-center py-5 position-relative" data-aos="fade-down">
+      <h1 class="display-4 font-weight-bold mb-3 hero-title">Bienvenidos al Curso de Desarrollo Web 2025</h1>
+      <p class="lead mb-4 hero-subtitle">Universidad de La Guajira - Sede Maicao</p>
+      <a href="#team" class="btn hero-btn btn-lg font-weight-bold">
+        <i class="fa-solid fa-users"></i> Conoce al equipo
+      </a>
+      <div class="hero-bubbles"></div>
     </section>
 
     <section id="team" class="py-5 bg-light" data-aos="fade-up">
       <div class="container">
-        <h2 class="text-center mb-4">Nuestro Equipo</h2>
+        <h2 class="text-center mb-4 team-title">Nuestro Equipo</h2>
         <div class="row" id="team-row"></div>
       </div>
     </section>
 
-    <section id="contact" class="py-5" data-aos="fade-up">
+    <section id="contact" class="py-5 contact-section" data-aos="fade-up">
       <div class="container">
-        <h2 class="text-center mb-4">Contacto</h2>
+        <h2 class="text-center mb-4 contact-title">Contacto</h2>
         <form>
           <div class="form-group">
             <label for="name">Nombre</label>
@@ -82,8 +86,16 @@
     </section>
   </main>
 
-  <footer class="bg-dark text-white text-center py-3">
+  <footer class="footer-main bg-dark text-white text-center py-4 position-relative">
+    <div class="mb-2">
+      <a href="https://facebook.com/" target="_blank" class="mx-2 social-link"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://instagram.com/" target="_blank" class="mx-2 social-link"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://github.com/" target="_blank" class="mx-2 social-link"><i class="fab fa-github fa-lg"></i></a>
+      <a href="mailto:correo@uniguajira.edu.co" class="mx-2 social-link"><i class="fas fa-envelope fa-lg"></i></a>
+      <a href="https://linkedin.com/" target="_blank" class="mx-2 social-link"><i class="fab fa-linkedin fa-lg"></i></a>
+    </div>
     <p class="mb-0">&copy; 2025 - Curso Desarrollo Web - Uniguajira</p>
+    <div class="footer-bar"></div>
   </footer>
 
   <!-- Botón de modo oscuro -->
