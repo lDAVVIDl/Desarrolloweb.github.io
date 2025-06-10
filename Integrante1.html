@@ -51,13 +51,44 @@
               <li class="list-inline-item badge badge-info p-2">Bootstrap</li>
               <li class="list-inline-item badge badge-info p-2">JavaScript</li>
             </ul>
-            <div class="mb-3">
-              <a href="https://github.com/alanhenriquez" target="_blank" class="btn btn-outline-dark btn-sm mx-1" title="GitHub">
-                <i class="fab fa-github"></i> GitHub
+
+            <!-- Barras de habilidades -->
+            <div class="mb-4">
+              <div class="text-left font-weight-bold" style="color:#ffc107;">HTML</div>
+              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
+                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="95"></div>
+              </div>
+              <div class="text-left font-weight-bold" style="color:#ffc107;">CSS</div>
+              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
+                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="90"></div>
+              </div>
+              <div class="text-left font-weight-bold" style="color:#ffc107;">JavaScript</div>
+              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
+                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="80"></div>
+              </div>
+              <div class="text-left font-weight-bold" style="color:#ffc107;">Python</div>
+              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
+                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="70"></div>
+              </div>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="mb-4">
+              <a href="https://facebook.com/" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-facebook fa-lg"></i></a>
+              <a href="https://instagram.com/" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="https://github.com/alanhenriquez" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-github fa-lg"></i></a>
+              <a href="mailto:alan@email.com" class="mx-1" style="color:#283593;"><i class="fas fa-envelope fa-lg"></i></a>
+              <a href="https://linkedin.com/" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+
+            <!-- Botones modernos -->
+            <div class="mb-4 d-flex justify-content-center">
+              <a href="cv-alan.pdf" target="_blank" class="btn btn-lg font-weight-bold mr-2" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
+                <i class="fa-solid fa-file-lines"></i> Descargar CV
               </a>
-              <a href="mailto:alan@email.com" class="btn btn-outline-primary btn-sm mx-1" title="Correo">
-                <i class="fas fa-envelope"></i> Email
-              </a>
+              <button class="btn btn-lg font-weight-bold" id="btn-contactar" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
+                <i class="fa-solid fa-paper-plane"></i> Contactar
+              </button>
             </div>
             <a href="index.html" class="btn btn-primary">Volver al inicio</a>
           </div>
@@ -65,6 +96,34 @@
       </div>
     </section>
   </main>
+
+  <!-- Modal de contacto -->
+<div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-labelledby="contactoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background: #f8f9fa; border-radius:1rem;">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="contactoLabel" style="color:#283593;">Contacto Rápido</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="p-3">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Tu nombre" style="background:#fff; color:#283593;" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Tu correo" style="background:#fff; color:#283593;" required>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="3" placeholder="Mensaje" style="background:#fff; color:#283593;" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-block font-weight-bold" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
+          <i class="fa-solid fa-paper-plane"></i> Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
 
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p class="mb-0">&copy; 2025 - Curso Desarrollo Web - Uniguajira</p>
@@ -80,5 +139,21 @@
   <script>
     AOS.init();
   </script>
+  <script>
+  // Animación de barras de habilidades
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.progress-bar.skill-bar').forEach(function(bar) {
+      var width = bar.getAttribute('data-width');
+      setTimeout(function() {
+        bar.style.width = width + '%';
+      }, 400);
+    });
+  });
+
+  // Abrir modal de contacto
+  document.getElementById('btn-contactar').onclick = function() {
+    $('#modalContacto').modal('show');
+  };
+</script>
 </body>
 </html>
