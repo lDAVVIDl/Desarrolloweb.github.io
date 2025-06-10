@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -35,12 +37,28 @@
   <main class="container mt-5">
     <section class="row justify-content-center">
       <div class="col-md-6" data-aos="fade-up">
-        <div class="card h-100 text-center">
-          <img src="./alan.jpg" class="card-img-top" alt="Alan Henriquez">
+        <div class="card h-100 text-center shadow-lg border-0" style="background: #f8f9fa;">
           <div class="card-body">
-            <h2 class="card-title">Alan Henriquez</h2>
-            <p class="card-text">Desarrollador Web</p>
-            <p>Estudiante de la Universidad de La Guajira, apasionado por la tecnología y el desarrollo web.</p>
+            <img src="./alan.jpg" class="rounded-circle mx-auto d-block mb-3 perfil-img" alt="Alan Henriquez" style="width: 160px; height: 160px; object-fit: cover; border: 4px solid #007bff;">
+            <h2 class="card-title font-weight-bold">Alan Henriquez</h2>
+            <p class="card-text text-primary mb-1">Desarrollador Web</p>
+            <p class="mb-3">Estudiante de la Universidad de La Guajira, apasionado por la tecnología y el desarrollo web.</p>
+            <hr>
+            <h5 class="mb-2">Habilidades</h5>
+            <ul class="list-inline mb-3">
+              <li class="list-inline-item badge badge-info p-2">HTML5</li>
+              <li class="list-inline-item badge badge-info p-2">CSS3</li>
+              <li class="list-inline-item badge badge-info p-2">Bootstrap</li>
+              <li class="list-inline-item badge badge-info p-2">JavaScript</li>
+            </ul>
+            <div class="mb-3">
+              <a href="https://github.com/alanhenriquez" target="_blank" class="btn btn-outline-dark btn-sm mx-1" title="GitHub">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="mailto:alan@email.com" class="btn btn-outline-primary btn-sm mx-1" title="Correo">
+                <i class="fas fa-envelope"></i> Email
+              </a>
+            </div>
             <a href="index.html" class="btn btn-primary">Volver al inicio</a>
           </div>
         </div>
