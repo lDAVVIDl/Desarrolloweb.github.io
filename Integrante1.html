@@ -1,153 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Alan Henriquez</title>
-    <!-- Font Awesome CDN para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 100%);
-            animation: bgmove 15s ease-in-out infinite alternate;
-            color: #fff;
-        }
-        @keyframes bgmove {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
-        .profile-container {
-            max-width: 410px;
-            margin: 60px auto;
-            background: rgba(30, 30, 60, 0.7);
-            padding: 35px 30px 30px 30px;
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-            text-align: center;
-            box-shadow: 0 12px 32px rgba(30, 30, 60, 0.18);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-        }
-        .profile-container:hover {
-            transform: translateY(-6px) scale(1.025);
-            box-shadow: 0 24px 48px rgba(30, 30, 60, 0.26);
-        }
-        .profile-container img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            margin-bottom: 18px;
-            box-shadow: 0 8px 24px #00dbde88;
-            object-fit: cover;
-            animation: pulseimg 2.5s infinite;
-        }
-        @keyframes pulseimg {
-            0%, 100% { box-shadow: 0 8px 24px #00dbde88; }
-            50% { box-shadow: 0 0px 36px #ff4b2b88; }
-        }
-        h2 {
-            font-size: 2.4rem;
-            margin-bottom: 6px;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 10px #00dbde77, 0 0 2px #fff;
-        }
-        .rol {
-            font-size: 1.1rem;
-            color: #ffce00;
-            margin-bottom: 10px;
-        }
-        .desc {
-            font-size: 1.03rem;
-            margin-bottom: 18px;
-            color: #d6eaff;
-            line-height: 1.5;
-        }
-        .skills {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 18px 0 20px 0;
-            flex-wrap: wrap;
-        }
-        .skill {
-            background: #ff4b2b;
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 1rem;
-            box-shadow: 0 2px 8px #ff4b2b33;
-            transition: background 0.2s;
-        }
-        .skill:nth-child(2) { background: #0083b0; }
-        .skill:nth-child(3) { background: #ffce00; color: #333; }
-        .social-links {
-            margin: 18px 0;
-        }
-        .social-links a {
-            text-decoration: none;
-            margin: 0 8px;
-            display: inline-block;
-            font-size: 1.5rem;
-            color: #fff;
-            padding: 10px;
-            background: rgba(0,219,222,0.2);
-            border-radius: 50%;
-            transition: background 0.3s, color 0.3s, transform 0.2s;
-        }
-        .social-links a:hover {
-            background: #ff4b2b;
-            color: #fff;
-            transform: scale(1.15) rotate(-8deg);
-        }
-        a.return {
-            display: inline-block;
-            margin-top: 30px;
-            background: #0083b0;
-            padding: 10px 24px;
-            color: #fff;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1px;
-            box-shadow: 0 2px 10px #0083b033;
-            transition: background 0.2s, color 0.2s, transform 0.2s;
-        }
-        a.return:hover {
-            background: #ffce00;
-            color: #333;
-            transform: scale(1.07);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Equipo Desarrollo Web Uniguajira" />
+  <meta name="description" content="Perfil del integrante Alan Henriquez" />
+  <meta name="keywords" content="HTML, CSS, Bootstrap, Frontend, Uniguajira" />
+  <title>Integrante - Alan Henriquez | DW 2025</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="profile-container">
-        <img src="alan.jpg" alt="Foto de Alan Henriquez">
-        <h2>Alan Henriquez</h2>
-        <div class="rol"><i class="fa-solid fa-laptop-code"></i> Desarrollador Web</div>
-        <div class="desc">
-            Estudiante de Ingeniería de Sistemas de octavo semestre en la Universidad de La Guajira, sede Maicao.<br>
-            24 años de edad. Dedicado a la programación web, desarrollo de aplicaciones, reparaciones de computadores, instalación de hardware y mantenimiento de redes informaticas.
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="index.html">DW 2025</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#team">Equipo</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+    <section class="row justify-content-center">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="card h-100 text-center">
+          <img src="./alan.jpg" class="card-img-top" alt="Alan Henriquez">
+          <div class="card-body">
+            <h2 class="card-title">Alan Henriquez</h2>
+            <p class="card-text">Desarrollador Web</p>
+            <p>Estudiante de la Universidad de La Guajira, apasionado por la tecnología y el desarrollo web.</p>
+            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+          </div>
         </div>
-        <div class="skills">
-            <span class="skill"><i class="fab fa-html5"></i> HTML</span>
-            <span class="skill"><i class="fab fa-css3-alt"></i> CSS</span>
-            <span class="skill"><i class="fab fa-js-square"></i> JavaScript</span>
-        </div>
-        <div class="social-links">
-            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <!-- Puedes agregar más redes si quieres -->
-        </div>
-        <a href="index.html" class="return"><i class="fa-solid fa-arrow-left"></i> Volver al equipo</a>
-    </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 - Curso Desarrollo Web - Uniguajira</p>
+  </footer>
+
+  <!-- Botón de modo oscuro -->
+  <button class="toggle-mode" onclick="document.documentElement.classList.toggle('dark-mode')">🌙 Modo Oscuro</button>
+
+  <!-- Bootstrap y AOS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
