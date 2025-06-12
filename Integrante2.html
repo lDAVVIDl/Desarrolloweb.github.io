@@ -1,107 +1,281 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Diris Ortiz</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-    <!-- AOS Animation -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(270deg, #ff416c, #ff4b2b, #ffce00, #00dbde, #0083b0);
-            background-size: 1200% 1200%;
-            animation: gradientFlow 20s ease infinite;
-            min-height: 100vh;
-        }
-        @keyframes gradientFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .card {
-            background: rgba(255,255,255,0.13);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-            border: none;
-            border-radius: 22px;
-            backdrop-filter: blur(5px);
-        }
-        .profile-img {
-            width: 170px;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            margin-top: -90px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .skills .badge {
-            margin: 0 6px;
-            font-size: 1rem;
-            padding: 0.7em 1em;
-            background: rgba(255,255,255,0.23);
-            color: #222;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-        }
-        .social-links a {
-            margin: 0 10px;
-            color: #ff416c;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #00dbde;
-        }
-        .btn-return {
-            margin-top: 30px;
-            background: #ff416c;
-            color: #fff;
-            border-radius: 10px;
-        }
-        .btn-return:hover {
-            background: #00dbde;
-            color: #111;
-        }
-    </style>
-    <script src="https://kit.fontawesome.com/4e0a22c9e2.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Equipo Desarrollo Web Uniguajira" />
+  <meta name="description" content="Perfil del integrante Diris Ortiz" />
+  <meta name="keywords" content="HTML, CSS, Bootstrap, Frontend, Uniguajira" />
+  <title>Integrante - Diris Ortiz | DW 2025</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Estilos personalizados para Integrante2 -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f8f9fa;
+      min-height: 100vh;
+    }
+    .card {
+      background: #f8f9fa;
+      border: none;
+      border-radius: 22px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+    .perfil-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #007bff;
+      margin-top: -80px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .badge-info {
+      background: #007bff;
+      color: #fff;
+    }
+    .habilidad-tarjeta {
+      background: #6c6f8a;
+      color: #fff;
+      border-radius: 15px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(40,53,147,0.10);
+    }
+    .habilidad-icono {
+      font-size: 2rem;
+      color: #283593;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+    .habilidad-nombre {
+      font-weight: bold;
+      margin-bottom: 0;
+      color: #ffc107;
+    }
+    .habilidad-nivel {
+      margin-left: auto;
+    }
+    .habilidad-nivel i {
+      color: #ffc107;
+      font-size: 1.2rem;
+    }
+    /* Social icons */
+    .social-link {
+      color: #283593;
+      margin: 0 8px;
+      font-size: 1.3rem;
+      transition: color 0.2s;
+    }
+    .social-link:hover {
+      color: #007bff;
+    }
+    .btn-cv, .btn-contactar {
+      background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%);
+      color: #fff;
+      font-weight: bold;
+      margin-right: 10px;
+      border: none;
+    }
+    .btn-cv:hover, .btn-contactar:hover {
+      background: linear-gradient(90deg,#007bff 60%,#ffc107 100%);
+      color: #fff;
+    }
+    .modal-content {
+      background: #f8f9fa;
+      border-radius:1rem;
+    }
+    .modal-title {
+      color:#283593;
+    }
+    /* Dark mode button */
+    .toggle-mode {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #343a40;
+      color: #ffc107;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 22px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .dark-mode {
+      background: #222 !important;
+      color: #fff !important;
+    }
+    .dark-mode .card,
+    .dark-mode .modal-content {
+      background: #27293d !important;
+      color: #fff !important;
+    }
+    .dark-mode .habilidad-tarjeta {
+      background: #343a40;
+    }
+    .dark-mode .modal-title {
+      color: #ffc107 !important;
+    }
+    .dark-mode .social-link {
+      color: #ffc107;
+    }
+    .dark-mode .btn-cv,
+    .dark-mode .btn-contactar {
+      background: linear-gradient(90deg,#283593 60%,#ffc107 100%);
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-7">
-                <div class="card text-center p-4" data-aos="zoom-in">
-                    <img src="diris.jpg" alt="Foto de Diris Ortiz" class="profile-img mx-auto shadow">
-                    <div class="card-body">
-                        <h2 class="card-title mb-2" style="font-weight:700; color:#ff416c;">Diris Ortiz</h2>
-                        <h4 class="text-muted mb-3">Diseñadora</h4>
-                        <p>
-                            Estudiante de Ingeniería de Sistemas en octavo semestre de la Universidad de La Guajira sede Maicao, 23 años de edad. Creativa e innovadora, apasionada por el diseño visual y la experiencia de usuario. 
-                        </p>
-                        <div class="skills mb-3">
-                            <span class="badge badge-pill">HTML</span>
-                            <span class="badge badge-pill">CSS</span>
-                            <span class="badge badge-pill">JavaScript</span>
-                        </div>
-                        <div class="social-links mb-2">
-                            <a href="#" title="Facebook"><i class="fab fa-facebook fa-fw"></i></a>
-                            <a href="#" title="Instagram"><i class="fab fa-instagram fa-fw"></i></a>
-                        </div>
-                        <a href="index.html" class="btn btn-return">← Volver al equipo</a>
-                    </div>
-                </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="index.html">DW 2025</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#team">Equipo</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container mt-5">
+    <section class="row justify-content-center">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="card h-100 text-center shadow-lg border-0">
+          <div class="card-body">
+            <img src="./diris.jpg" class="rounded-circle mx-auto d-block mb-3 perfil-img" alt="Diris Ortiz">
+            <h2 class="card-title font-weight-bold">Diris Ortiz</h2>
+            <p class="card-text text-primary mb-1">Diseñadora</p>
+            <p class="mb-3">
+              Estudiante de Ingeniería de Sistemas en octavo semestre de la Universidad de La Guajira sede Maicao, 23 años de edad. Creativa e innovadora, apasionada por el diseño visual y la tecnología.
+            </p>
+            <hr>
+            <h5 class="mb-2">Habilidades</h5>
+            <!-- Tarjetas de habilidades -->
+            <div class="habilidad-tarjeta">
+              <span class="habilidad-icono"><i class="fab fa-html5"></i></span>
+              <div>
+                <div class="habilidad-nombre">HTML5</div>
+                <small>Estructuración web moderna</small>
+              </div>
+              <div class="habilidad-nivel" title="Nivel: Avanzado">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
             </div>
+            <div class="habilidad-tarjeta">
+              <span class="habilidad-icono"><i class="fab fa-css3-alt"></i></span>
+              <div>
+                <div class="habilidad-nombre">CSS3</div>
+                <small>Diseño responsivo y animaciones</small>
+              </div>
+              <div class="habilidad-nivel" title="Nivel: Avanzado">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="habilidad-tarjeta">
+              <span class="habilidad-icono"><i class="fab fa-js"></i></span>
+              <div>
+                <div class="habilidad-nombre">JavaScript</div>
+                <small>Interactividad web</small>
+              </div>
+              <div class="habilidad-nivel" title="Nivel: Intermedio">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <!-- Redes sociales -->
+            <div class="mb-4">
+              <a href="https://facebook.com/" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+              <a href="https://instagram.com/" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="mailto:diris@email.com" class="social-link" title="Correo"><i class="fas fa-envelope fa-lg"></i></a>
+              <a href="https://linkedin.com/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+            <!-- Botones modernos -->
+            <div class="mb-4 d-flex justify-content-center">
+              <a href="cv-diris.pdf" target="_blank" class="btn btn-lg btn-cv mr-2">
+                <i class="fa-solid fa-file-lines"></i> Descargar CV
+              </a>
+              <button class="btn btn-lg btn-contactar" id="btn-contactar">
+                <i class="fa-solid fa-paper-plane"></i> Contactar
+              </button>
+            </div>
+            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de contacto (igual estilo que Integrante1)-->
+  <div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-labelledby="contactoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="contactoLabel" style="color:#283593;">Contacto Rápido</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="p-3">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Tu nombre" style="background:#fff; color:#283593;" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Tu correo" style="background:#fff; color:#283593;" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="3" placeholder="Mensaje" style="background:#fff; color:#283593;" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-block font-weight-bold btn-contactar">
+            <i class="fa-solid fa-paper-plane"></i> Enviar
+          </button>
+        </form>
+      </div>
     </div>
-    <!-- Bootstrap & AOS Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 - Curso Desarrollo Web - Uniguajira</p>
+  </footer>
+
+  <!-- Botón de modo oscuro -->
+  <button class="toggle-mode" onclick="document.documentElement.classList.toggle('dark-mode')">🌙 Modo Oscuro</button>
+
+  <!-- Bootstrap y AOS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    // Abrir modal de contacto
+    document.getElementById('btn-contactar').onclick = function() {
+      $('#modalContacto').modal('show');
+    };
+  </script>
 </body>
 </html>
