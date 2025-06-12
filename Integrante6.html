@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #ff416c;
-            --secondary: #00dbde;
-            --accent: #ffce00;
-            --bg-dark: #232936cc; /* Ligero ajuste al color de fondo */
-            --glass: rgba(255, 255, 255, 0.10); /* Más visible */
-            --border-glow: 0 0 15px #ff00de8c, 0 0 25px #00dbde66;
+            --primary: #6c63ff; /* Azul suave */
+            --secondary: #43e97b; /* Verde menta */
+            --accent: #ffd86e;
+            --bg-dark: #232936d8; /* Fondo más suave */
+            --glass: rgba(255, 255, 255, 0.14);
+            --border-glow: 0 0 12px #43e97b7a, 0 0 16px #6c63ff66;
         }
         @keyframes gradientFlow {
             0% { background-position: 0% 50%; }
@@ -27,7 +27,7 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             min-height: 100vh;
-            background: linear-gradient(125deg, var(--primary), var(--secondary), var(--accent), #0083b0, #2b5876);
+            background: linear-gradient(125deg, var(--primary), var(--secondary), var(--accent), #90caf9, #2b5876);
             background-size: 2000% 2000%;
             animation: gradientFlow 24s ease infinite;
             color: #fff;
@@ -41,13 +41,13 @@
         }
         .profile-container {
             background: var(--bg-dark);
-            border-radius: 2.5rem; /* Más redondeado */
-            box-shadow: 0 14px 55px #0008, 0 0 0 2px var(--glass);
-            padding: 2.8rem 2.4rem 2.2rem 2.4rem;
-            max-width: 430px;
+            border-radius: 2.5rem;
+            box-shadow: 0 14px 55px #0007, 0 0 0 2px var(--glass);
+            padding: 2.4rem 2.1rem 2rem 2.1rem;
+            max-width: 420px;
             width: 100%;
             text-align: center;
-            backdrop-filter: blur(22px) saturate(1.25); /* Blur ligeramente aumentado */
+            backdrop-filter: blur(18px) saturate(1.13);
             position: relative;
             overflow: hidden;
         }
@@ -56,9 +56,9 @@
             position: absolute;
             top: -20%; left: -20%;
             width: 140%; height: 140%;
-            background: radial-gradient(circle at 70% 20%, var(--accent)22%, transparent 70%), 
-                        radial-gradient(circle at 10% 90%, var(--secondary)18%, transparent 60%);
-            opacity: 0.21; /* Un poco más visible */
+            background: radial-gradient(circle at 80% 25%, var(--accent)20%, transparent 70%),
+                        radial-gradient(circle at 12% 80%, var(--secondary)15%, transparent 60%);
+            opacity: 0.18;
             z-index: 0;
         }
         .profile-container * { position: relative; z-index: 1;}
@@ -67,46 +67,46 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.1rem;
         }
         .profile-img {
-            width: 150px; /* Un poco más pequeño */
-            height: 150px;
+            width: 130px;
+            height: 130px;
             object-fit: cover;
             border-radius: 50%;
-            border: 3.5px solid #fff;
-            box-shadow: 0 0 0 7px #ff416c33, 0 4px 18px #0006;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background: #fff3;
-            filter: saturate(1.15) contrast(1.15); /* Contraste levemente aumentado */
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 7px #6c63ff33, 0 4px 18px #0006;
+            transition: transform 0.28s, box-shadow 0.28s;
+            background: #fff2;
+            filter: saturate(1.09) contrast(1.11);
         }
         .profile-img:hover {
-            transform: scale(1.07) rotate(-2deg);
-            box-shadow: 0 0 0 12px #ff00de44, 0 4px 24px #00dbde44;
+            transform: scale(1.06) rotate(-1.5deg);
+            box-shadow: 0 0 0 10px #6c63ff44, 0 4px 20px #43e97b44;
         }
         h1 {
             font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-            font-size: 2.1rem; /* Ligeramente más pequeño */
-            margin-bottom: 0.22em;
-            animation: pulse 2.1s infinite;
-            letter-spacing: 1.2px;
+            font-size: 2rem;
+            margin-bottom: 0.20em;
+            animation: pulse 2s infinite;
+            letter-spacing: 1.1px;
             color: var(--primary);
         }
         .role {
             font-family: 'Montserrat', Arial, sans-serif;
             font-weight: 600;
-            font-size: 1.13rem;
-            letter-spacing: 2.2px;
+            font-size: 1.08rem;
+            letter-spacing: 2px;
             color: var(--secondary);
             text-shadow: 0 0 5px #fff3, 0 0 14px var(--secondary);
-            margin-bottom: 0.55rem;
+            margin-bottom: 0.38rem;
         }
         .description {
-            font-size: 1.07rem;
-            margin-bottom: 1.7rem;
-            line-height: 1.6;
-            color: #fff;
-            text-shadow: 0 1px 10px #0005;
+            font-size: 1.05rem;
+            margin-bottom: 1.4rem;
+            line-height: 1.58;
+            color: #f9f9f9;
+            text-shadow: 0 1px 10px #0004;
         }
         .highlight {
             color: var(--accent);
@@ -116,61 +116,65 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.7em;
-            margin-bottom: 1.4rem;
+            gap: 0.6em;
+            margin-bottom: 1.15rem;
         }
         .skill {
-            background: linear-gradient(120deg, var(--secondary) 30%, var(--primary) 80%);
-            color: #fff;
-            padding: 0.45em 1em;
-            border-radius: 1.25em;
+            background: linear-gradient(120deg, var(--secondary) 25%, var(--primary) 80%);
+            color: #232936;
+            padding: 0.42em 0.92em;
+            border-radius: 1.1em;
             font-family: 'Montserrat', Arial, sans-serif;
             font-weight: 700;
-            font-size: 1em;
-            box-shadow: 0 0 4px #ffce004a, 0 0 8px #00dbde44;
+            font-size: 0.99em;
+            box-shadow: 0 0 4px #ffd86e44, 0 0 8px #43e97b44;
             border: none;
-            transition: background 0.3s, color 0.15s, transform 0.18s;
+            transition: background 0.22s, color 0.13s, transform 0.16s;
             cursor: pointer;
             outline: none;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.44px;
         }
-        .skill:hover {
+        .skill:hover, .skill:focus {
             background: linear-gradient(120deg, #fff 40%, var(--primary) 100%);
             color: var(--primary);
-            transform: translateY(-2px) scale(1.08);
+            transform: translateY(-2px) scale(1.07);
             box-shadow: var(--border-glow);
         }
+        .skills .skill:last-child {
+            background: linear-gradient(120deg,#ffd86e 40%,#43e97b 100%);
+            color: #232936;
+        }
         .social-links {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             display: flex;
             justify-content: center;
-            gap: 0.7em;
+            gap: 0.65em;
         }
         .social-links a {
             text-decoration: none;
             background: linear-gradient(90deg, var(--primary) 65%, var(--secondary) 100%);
             color: #fff;
-            padding: 10px 19px 10px 17px;
-            border-radius: 1.3em;
+            padding: 10px 17px 10px 15px;
+            border-radius: 1.2em;
             font-family: 'Montserrat', Arial, sans-serif;
             font-weight: 600;
-            font-size: 1.09em;
+            font-size: 1.05em;
             display: flex;
             align-items: center;
-            gap: 0.55em;
-            box-shadow: 0 2px 12px #ff416c33;
+            gap: 0.45em;
+            box-shadow: 0 2px 10px #6c63ff2f;
             border: none;
-            transition: background 0.22s, color 0.16s, transform 0.18s;
+            transition: background 0.19s, color 0.15s, transform 0.15s, box-shadow 0.2s;
             outline: none;
             position: relative;
         }
         .social-links a::before {
             content: '';
             display: inline-block;
-            width: 1.25em;
-            height: 1.25em;
+            width: 1.1em;
+            height: 1.1em;
             background-size: cover;
-            margin-right: 0.4em;
+            margin-right: 0.3em;
         }
         .social-links a[aria-label*="Facebook"]::before {
             background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg');
@@ -183,38 +187,38 @@
         .social-links a:hover, .social-links a:focus {
             background: #fff;
             color: var(--primary);
-            transform: scale(1.09) translateY(-1px);
+            transform: scale(1.08) translateY(-1px);
             box-shadow: var(--border-glow);
         }
         .return-link {
             background: linear-gradient(90deg, var(--secondary) 65%, var(--accent) 100%);
-            padding: 11px 32px;
-            color: #fff;
-            border-radius: 1.2em;
+            padding: 10px 23px;
+            color: #232936;
+            border-radius: 1.1em;
             text-decoration: none;
             font-family: 'Montserrat', Arial, sans-serif;
             font-weight: 700;
-            font-size: 1.09em;
-            box-shadow: 0 2px 12px #0083b055;
-            transition: background 0.22s, color 0.17s, transform 0.18s;
+            font-size: 1.04em;
+            box-shadow: 0 2px 10px #43e97b33;
+            transition: background 0.18s, color 0.13s, transform 0.15s, box-shadow 0.2s;
             display: inline-block;
-            margin-top: 0.5rem;
-            letter-spacing: 1px;
+            margin-top: 0.4rem;
+            letter-spacing: 0.94px;
         }
         .return-link:hover, .return-link:focus {
             background: #fff;
             color: var(--secondary);
-            transform: scale(1.06) translateY(-2px);
+            transform: scale(1.05) translateY(-2px);
             box-shadow: var(--border-glow);
         }
         @media (max-width: 600px) {
             .profile-container {
                 max-width: 98vw;
-                padding: 1.3rem 0.3rem 1.1rem 0.3rem;
+                padding: 1.1rem 0.2rem 1rem 0.2rem;
             }
             .profile-img {
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
             }
         }
     </style>
@@ -228,16 +232,16 @@
         <h1>Oswaldo Uribe</h1>
         <div class="role">Desarrollador Web</div>
         <p class="description">
-            Estudiante de Ingeniería de Sistemas (8° semestre). <span class="highlight">Fuerte</span>, <span class="highlight">resiliente</span>, <span class="highlight">leal</span> y <span class="highlight">proactivo</span>.
+            Estudiante de Ingeniería de Sistemas (8° semestre). <span class="highlight">Fuerte</span>, <span class="highlight">resiliente</span>, <span class="highlight">leal</span> y <span class="highlight">colaborador</span>.
             Siempre <span class="highlight">dispuesto a aprender</span> y aportar valor al equipo con creatividad y pasión por la tecnología.
         </p>
         <div class="skills" aria-label="Habilidades tecnológicas">
-            <span class="skill" tabindex="0">HTML</span>
-            <span class="skill" tabindex="0">CSS</span>
-            <span class="skill" tabindex="0">JavaScript</span>
-            <span class="skill" tabindex="0">Python</span>
-            <span class="skill" tabindex="0">C++</span>
-            <span class="skill" tabindex="0" style="background:linear-gradient(120deg,#ffce00 40%,#00dbde 100%);color:#232936;">Trabajo en equipo</span>
+            <button class="skill" tabindex="0">HTML</button>
+            <button class="skill" tabindex="0">CSS</button>
+            <button class="skill" tabindex="0">JavaScript</button>
+            <button class="skill" tabindex="0">Python</button>
+            <button class="skill" tabindex="0">C++</button>
+            <button class="skill" tabindex="0">Trabajo en equipo</button>
         </div>
         <nav class="social-links" aria-label="Redes sociales">
             <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Oswaldo Uribe">Facebook</a>
