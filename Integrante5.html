@@ -48,14 +48,19 @@
             <h2 class="card-title font-weight-bold">Alexander Meza</h2>
             <p class="card-text text-primary mb-1">Desarrollador Web</p>
             <p class="mb-3">
-              23 años. Estudiante de Ingeniería de Sistemas en octavo semestre en la Universidad de La Guajira, sede Maicao. 
+           23 años. Estudiante de Ingeniería de Sistemas en octavo semestre en la Universidad de La Guajira, sede Maicao. 
               Con formación en marketing digital, desarrollo humano, gestión estratégica para el desarrollo,fotografia, diseño grafico, control aéreo básico, 
-              programas de alto impacto social, técnicas de lenguaje oral y más. Apasionado por el desarrollo y la transformación digital.
+              programas de alto impacto social, técnicas de lenguaje oral y más. Apasionado por el desarrollo y la transformación digita
             </p>
             <hr>
-            
+            <h5 class="mb-2">Habilidades</h5>
+            <ul class="list-inline mb-3">
+              <li class="list-inline-item badge badge-info p-2">HTML5</li>
+              <li class="list-inline-item badge badge-info p-2">CSS3</li>
+              <li class="list-inline-item badge badge-info p-2">JavaScript</li>
+            </ul>
 
-       
+           
 
             <div class="mb-4">
               <a href="https://facebook.com/" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-facebook fa-lg"></i></a>
@@ -118,14 +123,7 @@
   <script>
     AOS.init();
 
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.progress-bar.skill-bar').forEach(function(bar) {
-        var width = bar.getAttribute('data-width');
-        setTimeout(function() {
-          bar.style.width = width + '%';
-        }, 400);
-      });
-    });
+    // Eliminado el script de animación de barras de progreso
 
     document.getElementById('btn-contactar').onclick = function() {
       $('#modalContacto').modal('show');
@@ -133,5 +131,3 @@
   </script>
 </body>
 </html>
-
-
