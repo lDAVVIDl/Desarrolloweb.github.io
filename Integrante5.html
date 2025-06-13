@@ -1,151 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Equipo Desarrollo Web Uniguajira" />
-  <meta name="description" content="Perfil del integrante Alexander Meza" />
-  <meta name="keywords" content="HTML, CSS, Bootstrap, Frontend, Uniguajira" />
-  <title>Integrante - Alexander Meza | DW 2025</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <!-- AOS Animations -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander Meza - Habilidades</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .skills-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .skills-tags span {
+      background: #00bcd4;
+      padding: 6px 14px;
+      color: white;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      color: orange;
+      margin-bottom: 5px;
+    }
+
+    .skill-bar {
+      background: #66667c;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 14px;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: gold;
+      width: 0;
+      animation: fillBar 2s forwards;
+    }
+
+    @keyframes fillBar {
+      from { width: 0; }
+      to { width: 80%; }
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      color: #3b3b70;
+      margin: 0 10px;
+      font-size: 22px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: orange;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      background: linear-gradient(to right, #007bff, gold);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .return-btn {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      background: green;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand" href="index.html">DW 2025</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html#team">Equipo</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main class="container mt-5">
-    <section class="row justify-content-center">
-      <div class="col-md-6" data-aos="fade-up">
-        <div class="card h-100 text-center shadow-lg border-0" style="background: #f8f9fa;">
-          <div class="card-body">
-            <img src="./alexander.jpg" class="rounded-circle mx-auto d-block mb-3 perfil-img" alt="Alexander Meza" style="width: 160px; height: 160px; object-fit: cover; border: 4px solid #007bff;">
-            <h2 class="card-title font-weight-bold">Alexander Meza</h2>
-            <p class="card-text text-primary mb-1">DIESEÑADOR GRAFICO</p>
-            <p class="mb-3">23 años. Estudiante de Ingeniería de Sistemas en octavo semestre en la Universidad de La Guajira, sede Maicao. 
-      Con formación en marketing digital, desarrollo humano, gestión estratégica para el desarrollo, control aéreo básico, 
-      programas de alto impacto social, técnicas de lenguaje oral y más. Apasionado por el desarrollo, marketing digital, y fotografia y la transformación digital.</p>
-            <hr>
-            <h5 class="mb-2">Habilidades</h5>
-            <ul class="list-inline mb-3">
-              <li class="list-inline-item badge badge-info p-2">HTML5</li>
-              <li class="list-inline-item badge badge-info p-2">CSS3</li>
-              <li class="list-inline-item badge badge-info p-2">Bootstrap</li>
-              <li class="list-inline-item badge badge-info p-2">JavaScript</li>
-            </ul>
-
-            <div class="mb-4">
-              <div class="text-left font-weight-bold" style="color:#ffc107;">HTML</div>
-              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
-                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="95"></div>
-              </div>
-              <div class="text-left font-weight-bold" style="color:#ffc107;">CSS</div>
-              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
-                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="90"></div>
-              </div>
-              <div class="text-left font-weight-bold" style="color:#ffc107;">JavaScript</div>
-              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
-                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="80"></div>
-              </div>
-              <div class="text-left font-weight-bold" style="color:#ffc107;">Python</div>
-              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
-                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="70"></div>
-              </div>
-            </div>
-
-            <!-- Redes sociales -->
-            <div class="mb-4">
-              <a href="https://www.facebook.com/share/16PyW9mMU4/?mibextid=wwXIfr" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-facebook fa-lg"></i></a>
-              <a href="https://www.instagram.com/alexmeza03?igsh=Mnprc2pzdTk0c3Qy&utm_source=qr" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-instagram fa-lg"></i></a>
-              <a href="mailto:Ajuniormeza@uniguajira.edu.co" class="mx-1" style="color:#283593;"><i class="fas fa-envelope fa-lg"></i></a>
-            </div>
-
-            <!-- Botones modernos -->
-            <div class="mb-4 d-flex justify-content-center">
-              <a href="#" class="btn btn-lg font-weight-bold mr-2" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
-                <i class="fa-solid fa-file-lines"></i> Descargar CV
-              </a>
-              <button class="btn btn-lg font-weight-bold" id="btn-contactar" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
-                <i class="fa-solid fa-paper-plane"></i> Contactar
-              </button>
-            </div>
-            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Modal de contacto -->
-  <div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-labelledby="contactoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content" style="background: #f8f9fa; border-radius:1rem;">
-        <div class="modal-header border-0">
-          <h5 class="modal-title" id="contactoLabel" style="color:#283593;">Contacto Rápido</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <form class="p-3">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tu nombre" style="background:#fff; color:#283593;" required>
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Tu correo" style="background:#fff; color:#283593;" required>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="3" placeholder="Mensaje" style="background:#fff; color:#283593;" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-block font-weight-bold" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
-            <i class="fa-solid fa-paper-plane"></i> Enviar
-          </button>
-        </form>
-      </div>
+  <div class="container">
+    <h2>Habilidades</h2>
+    <div class="skills-tags">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>Bootstrap</span>
+      <span>JavaScript</span>
     </div>
+
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Python</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 60%;"></div></div>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/16PyW9mMU4/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/alexmeza03?igsh=Mnprc2pzdTk0c3Qy&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:Ajuniormeza@uniguajira.edu.co"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <div class="buttons">
+      <button class="btn">📄 Descargar CV</button>
+      <button class="btn">📨 Contactar</button>
+    </div>
+
+    <a href="index.html" class="return-btn">Volver al inicio</a>
   </div>
-
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">&copy; 2025 - Curso Desarrollo Web - Uniguajira</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.progress-bar.skill-bar').forEach(function(bar) {
-        var width = bar.getAttribute('data-width');
-        setTimeout(function() {
-          bar.style.width = width + '%';
-        }, 400);
-      });
-    });
-    document.getElementById('btn-contactar').onclick = function() {
-      $('#modalContacto').modal('show');
-    };
-  </script>
 </body>
 </html>
 
