@@ -3,142 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil de Alexander Meza</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    @keyframes gradientFlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+  <meta name="author" content="Equipo Desarrollo Web Uniguajira" />
+  <meta name="description" content="Perfil del integrante Alexander Meza" />
+  <meta name="keywords" content="HTML, CSS, Bootstrap, Frontend, Uniguajira" />
+  <title>Integrante - Alexander Meza | DW 2025</title>
 
-    @keyframes pulse {
-      0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00de; }
-      50% { text-shadow: 0 0 20px #fff, 0 0 60px #ff00de; }
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: linear-gradient(270deg, #ff416c, #8e54e9); /* FONDO CAMBIADO */
-      background-size: 1000% 1000%;
-      animation: gradientFlow 20s ease infinite;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-    .profile-container {
-      max-width: 700px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-    .profile-container img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 20px;
-      object-fit: cover;
-    }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-    h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      animation: pulse 2s infinite;
-      margin-bottom: 10px;
-    }
-
-    p {
-      line-height: 1.6;
-      font-size: 1rem;
-      margin: 10px 0;
-    }
-
-    .skills {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
-
-    .skill {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .social-links a {
-      text-decoration: none;
-      background: red; /* BOTÓN ROJO */
-      color: yellow;    /* TEXTO AMARILLO */
-      padding: 10px 20px;
-      margin: 8px;
-      border-radius: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 500;
-      transition: 0.3s ease;
-    }
-
-    .social-links a:hover {
-      transform: scale(1.1);
-      background: yellow;
-      color: red;
-    }
-
-    a.return {
-      display: inline-block;
-      margin-top: 30px;
-      background: rgba(255, 255, 255, 0.3);
-      padding: 12px 24px;
-      color: #fff;
-      border-radius: 12px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    a.return:hover {
-      background: rgba(255, 255, 255, 0.6);
-      color: #000;
-    }
-  </style>
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="profile-container">
-    <img src="Imagen de WhatsApp 2025-06-12 a las 21.37.06_3acf5ae2.jpg" alt="Foto de Alexander Meza">
-    <h2>Alexander Meza</h2>
-    <p><strong>Rol:</strong> Desarrollador Web</p>
-    <p>
-      23 años. Estudiante de Ingeniería de Sistemas en octavo semestre en la Universidad de La Guajira, sede Maicao. 
-      Con formación en marketing digital, desarrollo humano, gestión estratégica para el desarrollo, control aéreo básico, 
-      programas de alto impacto social, técnicas de lenguaje oral y más. Apasionado por el desarrollo, marketing digital, y fotografia y la transformación digital.
-    </p>
-    <div class="skills">
-      <span class="skill">HTML</span>
-      <span class="skill">CSS</span>
-      <span class="skill">JavaScript</span>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="index.html">DW 2025</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#team">Equipo</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+    <section class="row justify-content-center">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="card h-100 text-center shadow-lg border-0" style="background: #f8f9fa;">
+          <div class="card-body">
+            <img src="./alexander.jpg" class="rounded-circle mx-auto d-block mb-3 perfil-img" alt="Alexander Meza" style="width: 160px; height: 160px; object-fit: cover; border: 4px solid #007bff;">
+            <h2 class="card-title font-weight-bold">Alexander Meza</h2>
+            <p class="card-text text-primary mb-1">Desarrollador Web</p>
+            <p class="mb-3">
+              22 años. Estudiante de Ingeniería de Sistemas en octavo semestre en la Universidad de La Guajira, sede Maicao. 
+              Con formación en marketing digital, desarrollo humano, gestión estratégica para el desarrollo, control aéreo básico, 
+              programas de alto impacto social, técnicas de lenguaje oral y más. Apasionado por el desarrollo y la transformación digital.
+            </p>
+            <hr>
+            <h5 class="mb-2">Habilidades</h5>
+            <ul class="list-inline mb-3">
+              <li class="list-inline-item badge badge-info p-2">HTML5</li>
+              <li class="list-inline-item badge badge-info p-2">CSS3</li>
+              <li class="list-inline-item badge badge-info p-2">JavaScript</li>
+            </ul>
+
+            <div class="mb-4">
+              <div class="text-left font-weight-bold" style="color:#ffc107;">HTML</div>
+              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
+                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="95"></div>
+              </div>
+              <div class="text-left font-weight-bold" style="color:#ffc107;">CSS</div>
+              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
+                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="90"></div>
+              </div>
+              <div class="text-left font-weight-bold" style="color:#ffc107;">JavaScript</div>
+              <div class="progress mb-2" style="height: 14px; background: #6c6f8a;">
+                <div class="progress-bar bg-warning skill-bar" role="progressbar" style="width: 0%;" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <a href="https://facebook.com/" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-facebook fa-lg"></i></a>
+              <a href="https://instagram.com/" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="mailto:alexander@email.com" class="mx-1" style="color:#283593;"><i class="fas fa-envelope fa-lg"></i></a>
+              <a href="https://github.com/" target="_blank" class="mx-1" style="color:#283593;"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+
+            <div class="mb-4 d-flex justify-content-center">
+              <a href="cv-alexander.pdf" target="_blank" class="btn btn-lg font-weight-bold mr-2" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
+                <i class="fa-solid fa-file-lines"></i> Descargar CV
+              </a>
+              <button class="btn btn-lg font-weight-bold" id="btn-contactar" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
+                <i class="fa-solid fa-paper-plane"></i> Contactar
+              </button>
+            </div>
+            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de contacto -->
+  <div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-labelledby="contactoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="background: #f8f9fa; border-radius:1rem;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="contactoLabel" style="color:#283593;">Contacto Rápido</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="p-3">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Tu nombre" style="background:#fff; color:#283593;" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Tu correo" style="background:#fff; color:#283593;" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="3" placeholder="Mensaje" style="background:#fff; color:#283593;" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-block font-weight-bold" style="background: linear-gradient(90deg,#0093e9 60%,#ffc107 100%); color: #fff;">
+            <i class="fa-solid fa-paper-plane"></i> Enviar
+          </button>
+        </form>
+      </div>
     </div>
-    <div class="social-links">
-      <a href="https://www.facebook.com/share/16PyW9mMU4/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i>Facebook</a>
-      <a href="https://www.instagram.com/alexmeza03?igsh=Mnprc2pzdTk0c3Qy&utm_source=qr"><i class="fab fa-instagram"></i>Instagram</a>
-    </div>
-    <a href="index.html" class="return">← Volver al equipo</a>
   </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 - Curso Desarrollo Web - Uniguajira</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.progress-bar.skill-bar').forEach(function(bar) {
+        var width = bar.getAttribute('data-width');
+        setTimeout(function() {
+          bar.style.width = width + '%';
+        }, 400);
+      });
+    });
+
+    document.getElementById('btn-contactar').onclick = function() {
+      $('#modalContacto').modal('show');
+    };
+  </script>
 </body>
 </html>
 
