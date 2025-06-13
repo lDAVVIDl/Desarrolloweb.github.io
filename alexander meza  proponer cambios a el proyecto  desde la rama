@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Alexander Meza</title>
+    <style>
+        :root {
+            --color-rosa: #fbc2eb;
+            --color-azul: #a6c1ee;
+            --color-rosaclaro: #fde2e4;
+            --color-menta: #b5ead7;
+            --color-durazno: #ffdfd3;
+            --color-morado: #6a0572;
+            --color-azulfuerte: #0093e9;
+            --color-amarillo: #ffc107;
+            --color-grisoscuro: #23243a;
+            --color-grisoscuro2: #2c2e4a;
+        }
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes pulse {
+            0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px var(--color-morado); }
+            50% { text-shadow: 0 0 20px #fff, 0 0 40px var(--color-azulfuerte); }
+        }
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(270deg, var(--color-rosa), var(--color-azul), var(--color-rosaclaro), var(--color-menta), var(--color-durazno));
+            background-size: 1000% 1000%;
+            animation: gradientFlow 20s ease infinite;
+            color: #555;
+            transition: background 0.4s, color 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .profile-container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+        }
+        .profile-container img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--color-rosa);
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: var(--color-morado);
+            animation: pulse 2s infinite;
+            margin-bottom: 8px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.05rem;
+            margin: 10px 0;
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .skill {
+            background: var(--color-rosaclaro);
+            color: var(--color-morado);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .social-links a {
+            text-decoration: none;
+            background: var(--color-menta);
+            color: var(--color-morado);
+            padding: 10px 16px;
+            margin: 5px;
+            border-radius: 8px;
+            display: inline-block;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+            font-weight: 500;
+        }
+        .social-links a:hover {
+            transform: scale(1.1);
+            background: var(--color-rosa);
+            color: #fff;
+        }
+        a.return {
+            display: inline-block;
+            margin-top: 30px;
+            background: var(--color-durazno);
+            padding: 10px 20px;
+            color: var(--color-morado);
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        a.return:hover {
+            background: var(--color-azul);
+            color: #fff;
+        }
+        /* Dark mode opcional */
+        body.dark-mode {
+            background: var(--color-grisoscuro) !important;
+            color: #fff !important;
+        }
+        body.dark-mode .profile-container {
+            background: var(--color-grisoscuro2) !important;
+            color: #fff !important;
+        }
+        body.dark-mode .skill,
+        body.dark-mode .social-links a,
+        body.dark-mode a.return {
+            background: var(--color-morado) !important;
+            color: #fff !important;
+        }
+        body.dark-mode .social-links a:hover,
+        body.dark-mode a.return:hover {
+            background: var(--color-azulfuerte) !important;
+            color: #fff !important;
+        }
+    </style>
+    <!-- Google Fonts y FontAwesome opcional -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <img src="alexander.jpg" alt="Foto de Alexander Meza">
+        <h2>Alexander Meza</h2>
+        <p><strong>Rol:</strong> Desarrollador Web</p>
+        <p>
+            22 años. Estudiante de Ingeniería de Sistemas en octavo semestre en la Universidad de La Guajira, sede Maicao. 
+            Con formación en marketing digital, desarrollo humano, gestión estratégica para el desarrollo, control aéreo básico, 
+            programas de alto impacto social, técnicas de lenguaje oral y más. Apasionado por el desarrollo y la transformación digital.
+        </p>
+        <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        <a href="index.html" class="return">← Volver al equipo</a>
+    </div>
+</body>
+</html>
